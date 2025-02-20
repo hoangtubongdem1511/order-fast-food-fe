@@ -102,9 +102,9 @@ const Cart = () => {
                 <div>
                     <h1 className='text-center font-semibold text-2xl py-10'>Choose Delivery Address</h1>
                     <div className='flex gap-5 flex-wrap justify-center'>
-                        {[1].map((item) => (
+                        {/* {[1].map((item) => (
                             <AddressCart handleSelectAddress={createOrderUsingSelectAddress} item={item} showButton={true}/>
-                        ))}
+                        ))} */}
                         <Card className='flex gap-5 w-64 p-5'>
                             <AddLocation/>
                             <div className='space-y-3 text-gray-500'>
@@ -134,7 +134,7 @@ const Cart = () => {
                             <Field
                             as={TextField}
                             name='streetAddress'
-                            label='Street Address'
+                            label='Street address'
                             fullWidth
                             variant='outlined'
                             // error={!ErrorMessage('streetAddress')}
@@ -149,7 +149,7 @@ const Cart = () => {
                             <Field
                             as={TextField}
                             name='ward'
-                            label='ward'
+                            label='Ward'
                             fullWidth
                             variant='outlined'
                             // error={!ErrorMessage('streetAddress')}
@@ -164,7 +164,7 @@ const Cart = () => {
                             <Field
                             as={TextField}
                             name='district'
-                            label='district'
+                            label='District'
                             fullWidth
                             variant='outlined'
                             // error={!ErrorMessage('streetAddress')}
@@ -179,7 +179,7 @@ const Cart = () => {
                             <Field
                             as={TextField}
                             name='city'
-                            label='city'
+                            label='City'
                             fullWidth
                             variant='outlined'
                             // error={!ErrorMessage('streetAddress')}

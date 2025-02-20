@@ -32,6 +32,7 @@ const RestaurantDetail = () => {
     const handelFilter = (e) => {
         setFoodType(e.target.value)
         console.log(e.target.value, e.target.name)
+        console.log("Selected Food Type:", e.target.value);
     }
 
     const handelFilterCategory = (e , value) => {

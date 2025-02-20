@@ -10,8 +10,7 @@ export const AddressCart = ({item , showButton , handleSelectAddress}) => {
         <div className='space-y-3 text-gray-500'>
             <h1 className='font-semibold text-lg text-white'>Home</h1>
             <p>
-                123, Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quasi, quibusdam.
+                76/31 Nguyễn Cư Trinh, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh
             </p>
             {showButton && (
                 <Button variant='outlined' fullWidth onClick={() => handleSelectAddress(item)}>select</Button>

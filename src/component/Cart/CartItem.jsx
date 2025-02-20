@@ -12,6 +12,10 @@ export const CartItem = ({item}) => {
     const dispatch = useDispatch();
     const jwt = localStorage.getItem('jwt')
 
+    const handleRemeveCartItem = () => {
+        dispatch(removeCartItem({cartItemId:item.id , jwt:auth.jwt|| jwt}))
+    }
+    
     const handleUpdateCartItem = (value) => {
         if(value === -1 && item.quantity === 1) {
             handleRemeveCartItem()
@@ -20,9 +24,6 @@ export const CartItem = ({item}) => {
         dispatch(updateCartItem({data , jwt}))
     }
 
-    const handleRemeveCartItem = () => {
-        dispatch(removeCartItem({cartItemId:item.id , jwt:auth.jwt|| jwt}))
-    }
   return (
     <div className='px-5'>
         <div className='lg:flex items-center lg:space-x-5'>

@@ -90,7 +90,7 @@ export const getIngredientsOfRestaurant = ({ id, jwt }) => {
     return async (dispatch) => {
       try {
         const {data} = await api.put(
-          `/api/admin/ingredients/restaurant/${id}/stoke`, {} , {
+          `/api/admin/ingredients/${id}/stoke`, {} , {
             headers: {
               Authorization: `Bearer ${jwt}`,
             },

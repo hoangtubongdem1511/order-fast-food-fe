@@ -8,7 +8,7 @@ export const registerUser = (reqData) => async (dispatch) => {
         const {data} = await axios.post(`${API_URL}/auth/signup`, reqData.userData);
         if(data.jwt)localStorage.setItem("jwt", data.jwt);
         if(data.role === "ROLE_RESTAURANT_OWNER") {
-            reqData.navigate("/admin/restaurant")
+            reqData.navigate("/admin/restaurants")
         }
         else {
             reqData.navigate("/")
@@ -67,7 +67,7 @@ export const loginUser = (reqData) => async (dispatch) => {
         if (data.jwt) {
             localStorage.setItem("jwt", data.jwt);
             dispatch({ type: LOGIN_SUCCESS, payload: data.jwt });
-            reqData.navigate(data.role === "ROLE_RESTAURANT_OWNER" ? "/admin/restaurant" : "/");
+            reqData.navigate(data.role === "ROLE_RESTAURANT_OWNER" ? "/" : "/"); //"/admin/restaurants"
             // Dispatch getUser action after successful login
             dispatch(getUser());
         }
